@@ -1,0 +1,63 @@
+<ion-view view-title="Retorno de Pasta">
+	<ion-content>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<div class="list">
+					<form ng-submit="addPasta(form)">
+
+
+<table width="100%" border="0" cellpadding="20" cellspacing="10">
+  <tbody>
+    <tr>
+      <td class="input-label">No cuadro</td>
+      <td><input type="number" ng-model="form.NoCuadro" placeholder="0" required></td>
+    </tr>
+    <tr>
+      <td class="input-label">Producto</td>
+      <td><select ng-model="form.idProducto" ng-options="producto.idProducto as producto.nombre for producto in productos"></select></td>
+    </tr>
+    <tr>
+      <td class="input-label">No cuadro</td>
+      <td><input type="number" ng-model="form.NoCuadro" placeholder="0" required></td>
+    </tr>
+  </tbody>
+</table>
+
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">No cuadro</span>
+							<input type="number" ng-model="form.NoCuadro" placeholder="0" required>
+						</label>
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Producto</span>
+							<select ng-model="form.idProducto" ng-options="producto.idProducto as producto.nombre for producto in productos"></select>
+						</label>
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Kilos</span>
+							<input type="text" ng-model="form.Kgs" value="0" required>
+						</label>
+
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Retorno</span>
+							<input type="text" ng-model="form.Retorno" value="0" required>
+						</label>
+
+
+
+
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Observaciones</span>
+							<textarea ng-model="form.Observaciones"></textarea>
+						</label>
+				<ul>
+                    <li class="err" ng-repeat="error in errors"> {{ error}} </li>
+                </ul>
+                <ul>
+                    <li class="info" ng-repeat="msg in msgs"> {{ msg}} </li>
+                </ul>
+						<button class="button button-full button-dark" type="submit" value="Submit">Guardar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

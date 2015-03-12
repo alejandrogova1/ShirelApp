@@ -1,0 +1,200 @@
+<ion-view view-title="Existencia">
+	<ion-content>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<div class="item list">
+					<p><input type="button" ng-click="scanCode()" value="Escanear codigo"></p>
+					<p><b>Clave del cliente:</b> {{idCliente}}</p>
+					<p><b>Cliente:</b> {{Cliente}}</p>
+				</div>
+				<div class="item list">
+				  <form ng-submit="saveExistencia(master)">
+					<h1>Existencias</h1>
+					<table width="100%" border="1" cellpadding="20" cellspacing="10">
+					  <thead>
+						<th>Producto</th>
+						<th>Existencia</th>
+						<th>Vendido x Tienda</th>
+						<th>Sugerido</th>
+						<th>Venta</th>
+					  </thead>
+					  <tbody>
+					  	<tr>
+							<td align="center">CH</td>
+						    <td><input type="number" min="0" ng-model="form.id_1_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_1_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_1_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_1_Venta"></td>
+						</tr>
+					  	<tr>
+							<td align="center">Gr</td>
+							<td><input type="number" min="0" ng-model="form.id_2_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_2_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_2_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_2_Venta"></td>
+						</tr>
+					  	<tr>
+							<td align="center">DOC</td>
+							<td><input type="number" min="0" ng-model="form.id_3_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_3_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_3_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_3_Venta"></td>
+						</tr>
+					  	<tr>
+							<td align="center">TOTO</td>
+						    <td><input type="number" min="0" ng-model="form.id_4_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_4_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_4_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_4_Venta"></td>
+						</tr>
+					  	<tr>
+							<td align="center">TH15</td>
+						    <td><input type="number" min="0" ng-model="form.id_5_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_5_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_5_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_5_Venta"></td>
+						</tr>
+					  	<tr>
+							<td align="center">BURRO</td>
+						    <td><input type="number" min="0" ng-model="form.id_6_Existencia"></td>
+						    <td><input type="number" min="0" ng-model="form.id_6_Vendido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_6_Sugerido"></td>
+						    <td><input type="number" min="0" ng-model="form.id_6_Venta"></td>
+						</tr>
+					  	<tr>
+							<td>&nbsp;</td>
+						    <td>&nbsp;</td>
+						    <td>&nbsp;</td>
+						    <td>{{(10*form.id_1_Sugerido) + (20*form.id_2_Sugerido) + (15*form.id_3_Sugerido) + (16*form.id_4_Sugerido) + (11*form.id_5_Sugerido) + (15*form.id_6_Sugerido)}}</td>
+						    <td>{{(10*form.id_1_Venta) + (20*form.id_2_Venta) + (15*form.id_3_Venta) + (16*form.id_4_Venta) + (11*form.id_5_Venta) + (15*form.id_6_Venta)}}</td>
+						</tr>
+					  </tbody>
+					</table>
+					<h1>Perecedero</h1>
+					<table width="100%" border="1" cellpadding="20" cellspacing="10">
+					  <thead>
+						<th>Producto</th>
+						<th>Rota</th>
+						<th>Prox/Cadu</th>
+						<th>Quebrada</th>
+						<th>Sucia</th>
+						<th>Caducado</th>
+						<th>Total</th>
+					  </thead>
+					  <tbody>
+					  	<tr>
+							<td align="center">CH</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  	<tr>
+							<td align="center">GR</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  	<tr>
+							<td align="center">DOZ</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  	<tr>
+							<td align="center">TOTO</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  	<tr>
+							<td align="center">TH15</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  	<tr>
+							<td align="center">BURRO</td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						    <td><input type="number" min="0"></td>
+						</tr>
+					  </tbody>
+					</table>
+					<h1>Compras directas a clientes</h1>
+					<table width="100%" border="1" cellpadding="20" cellspacing="10">
+					  <thead>
+						<th width="30%">Cantidad</th>
+						<th width="50%">Descripción</th>
+						<th width="10%">P/U</th>
+						<th width="10%">Importe</th>
+					  </thead>
+					  <tbody>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_1_compra" ng-value="0" /></td>
+							<td align="center">Paquete Chico 24 pzas</td>
+							<td align="center">10</td>
+							<td>{{10*form.id_1_compra}} <input type="hidden" ng-model="form.id_1_importe" ng-value="{{10*form.id_1_compra}}" /></td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_2_compra" /></td>
+							<td align="center">Paquete Grande 48 pzas</td>
+							<td align="center">20</td>
+							<td>{{20*form.id_2_compra}} <input type="hidden" ng-model="form.id_2_importe" value="{{20*form.id_2_compra}}" /></td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_3_compra"></td>
+							<td align="center">Paquete Docena 15 pzas</td>
+							<td align="center">15</td>
+							<td>{{15*form.id_3_compra}} <input type="hidden" ng-model="form.id_3_importe" value="{{15*form.id_3_compra}}" /></td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_4_compra"></td>
+							<td align="center">Paquete Totopo 400 gms</td>
+							<td align="center">16</td>
+							<td>{{16*form.id_4_compra}} <input type="hidden" ng-model="form.id_4_importe" value="{{16*form.id_4_compras}}" /></td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_5_compra"></td>
+							<td align="center">Paquete TH 15 pzas</td>
+							<td align="center">11</td>
+							<td>{{11*form.id_5_compra}} <input type="hidden" ng-model="form.id_5_importe" value="{{11*form.id_5_compras}}" /></td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.id_6_compra"></td>
+							<td align="center">Paquete TH Burro 10 pzas</td>
+							<td align="center">15</td>
+							<td>{{15*form.id_6_compra}} <input type="hidden" ng-model="form.id_6_importe" value="{{15*form.id_6_compras}}" /></td>
+						</tr>
+						<tr>
+							<td colspan="3" align="right">Total</td>
+							<td align="right"><input type="number" ng-model="form.totalCompras" value="{{form.id_1_compra}}" /></td>
+						</tr>
+					  </tbody>
+					</table>
+					<p>master= {{master | json}}</p>
+
+					<button class="button button-full button-dark" type="submit" value="Submit">Siguiente</button>
+				  </form>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

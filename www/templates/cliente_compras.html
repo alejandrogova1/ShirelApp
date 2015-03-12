@@ -1,0 +1,64 @@
+<ion-view view-title="Compras">
+	<ion-content>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<div class="item list">
+				  <form ng-submit="saveExistencia(form)">
+					<h1>Compra de producto a cliente</h1>
+					<table width="100%" border="1" cellpadding="20" cellspacing="10">
+					  <thead>
+						<th width="30%">Cantidad</th>
+						<th width="50%">Descripción</th>
+						<th width="10%">P/U</th>
+						<th width="10%">Importe</th>
+					  </thead>
+					  <tbody>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto1" /></td>
+							<td align="center">Paquete Chico 24 pzas</td>
+							<td align="center">10</td>
+							<td>{{10*form.idProducto1}}</td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto2" /></td>
+							<td align="center">Paquete Grande 48 pzas</td>
+							<td align="center">20</td>
+							<td>{{20*form.idProducto2}}</td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto3"></td>
+							<td align="center">Paquete Docena 15 pzas</td>
+							<td align="center">15</td>
+							<td>{{15*form.idProducto3}}</td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto4"></td>
+							<td align="center">Paquete Totopo 400 gms</td>
+							<td align="center">16</td>
+							<td>{{16*form.idProducto4}}</td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto5"></td>
+							<td align="center">Paquete TH 15 pzas</td>
+							<td align="center">11</td>
+							<td>{{11*form.idProducto5}}</td>
+						</tr>
+					  	<tr>
+							<td><input type="number" min="0" value="0" ng-model="form.idProducto6"></td>
+							<td align="center">Paquete TH Burro 10 pzas</td>
+							<td align="center">15</td>
+							<td>{{15*form.idProducto6}}</td>
+						</tr>
+						<tr>
+							<td colspan="3" align="right">Total</td>
+							<td align="right">{{total}}</td>
+						</tr>
+					  </tbody>
+					</table>
+					<button class="button button-full button-dark" type="submit" value="Submit">Siguiente</button>
+				  </form>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

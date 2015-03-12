@@ -1,0 +1,70 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-energized">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-energized">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+
+
+<div class="list">
+
+  <a class="item item-icon-left" href="#/app/inicio">
+    <i class="icon ion-home"></i> Inicio
+  </a>
+ 
+  <div class="item item-divider"><i class="icon ion-clipboard"></i> Produccion</div>
+  <a class="item item-icon-left" href="#/app/prod_pasta">Pasta</a>
+  <a class="item item-icon-left" href="#/app/prod_totopo">Totopo</a>
+  <a class="item item-icon-left" href="#/app/prod_tostadas">Tostadas</a>
+  <a class="item item-icon-left" href="#/app/prod_freidor">Freidor</a>
+  
+  <div class="item item-divider"><i class="icon ion-cube"></i> Almacen Insumos</div>
+  <a class="item item-icon-left" href="#">Entrada</a>
+  <a class="item item-icon-left" href="#">Salida</a>
+  <a class="item item-icon-left" href="#">Consumo de gas</a>
+
+  <div class="item item-divider"><i class="icon ion-cube"></i> Almacen Producción</div>
+  <a class="item item-icon-left" href="#">Salida a Almacen Ventas</a>
+  <a class="item item-icon-left" href="#">Consumo de gas</a>
+</div>
+
+
+
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/inicio"><i class="icon ion-home"></i> Inicio</ion-item>
+        <ion-item nav-clear menu-close href="#/app/prod_pasta"> Pasta</ion-item>
+        <ion-item nav-clear menu-close href="#/app/prod_totopo"> Totopo</ion-item>
+        <ion-item nav-clear menu-close href="#/app/prod_tostadas"> Tostadas</ion-item>
+        <ion-item nav-clear menu-close href="#/app/prod_freidor"> Freidor</ion-item>
+
+
+
+
+
+
+
+
+
+        <ion-item nav-clear menu-close ng-click="login()">Login</ion-item>
+        <ion-item nav-clear menu-close href="#/app/search"><i class="icon ion-clipboard"></i> Producción</ion-item>
+        <ion-item nav-clear menu-close href="#/app/browse"><i class="icon ion-cube"></i> Almacen</ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists">Inventario</ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists" class="bar bar-assertive">Inventario</ion-item>
+      </ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

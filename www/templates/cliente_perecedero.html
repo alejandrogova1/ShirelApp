@@ -1,0 +1,30 @@
+<ion-view view-title="Perecedero">
+	<ion-content>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<div class="item list">
+				  <form ng-submit="savePerecedero(form)">
+					<h1>Perecedero</h1>
+					<table width="100%" border="1" cellpadding="20" cellspacing="10">
+					  <thead>
+						<th width="25%">Cantidad</th>
+						<th width="25%">Descripción del producto</th>
+						<th width="25%">Tipo Perecedero</th>
+						<th width="25%">Fecha del producto</th>
+					  </thead>
+					  <tbody>
+					  	<tr>
+							<td width="30%"><input type="number" min="0" ng-model="form.NoCuadro"></td>
+							<td width="70%" align="center"><select ng-model="form.idProducto" ng-options="producto.id as producto.title for producto in productos"></select></td>
+							<td><select ng-model="form.idTipoProducto" ng-options="tipoproducto.id as tipoproducto.nombre for tipoproducto in tipoproductos"></select></td>
+							<td><input type="date"></td>
+						</tr>
+					  </tbody>
+					</table>
+					<button class="button button-full button-dark" type="submit" value="Submit">Siguiente</button>
+				  </form>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
